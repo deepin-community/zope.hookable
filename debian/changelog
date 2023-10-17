@@ -1,5 +1,157 @@
-template-repository (1.0-1) unstable; urgency=medium
+zope.hookable (5.1.0-1) unstable; urgency=medium
 
-  * Initial release
+  * QA upload.
+  * New upstream version 5.1.0
+  * d/control:
+    - Change homepage, point to GitHub
+    - Update Standards-Version to 4.6.0
+    - Bump debhelper to 13
+  * d/watch: Update version to 4
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sun, 22 Aug 2021 08:49:15 +0200
+
+zope.hookable (5.0.1-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream release
+  * Update Standards-Version to 4.5.0
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Fri, 24 Apr 2020 15:04:16 +0200
+
+zope.hookable (5.0.0-1) unstable; urgency=medium
+
+  * QA upload.
+  * New upstream release
+  * d/control
+    - Change to debhelper-compat
+    - Bump to debhelper 12
+    - Update to Standards-Version 4.4.1
+    - Add Root-Requires-Root: no
+    - Change priority from extra to optional
+    - Use secure URI on homepage.
+    - Added more info in extended-section.
+  * d/watch
+    - Use Secure URI.
+  * d/copyright
+    - Use secure URI.
+  * d/rules
+    - Add hardening=+all
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sat, 04 Jan 2020 08:28:38 +0100
+
+zope.hookable (4.2.0-2) unstable; urgency=medium
+
+  * Replace custom autopkgtest with autodep8
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 21 Sep 2019 14:16:44 +0200
+
+zope.hookable (4.2.0-1) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package. Closes: #869459.
+  * New upstream version.
+  * Stop building the Python2 package. Closes: #938906.
+  * Fix lintian warnings.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 05 Sep 2019 08:15:10 +0200
+
+zope.hookable (4.0.4-4) unstable; urgency=medium
+
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/copyright: Update Format header.
+  * d/watch: Use pypi.debian.net redirector.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 09 Jun 2015 18:13:00 -0400
+
+zope.hookable (4.0.4-3) unstable; urgency=medium
+
+  * debian/tests/all: Fix typo in shebang line.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 30 Jun 2014 14:54:17 -0400
+
+zope.hookable (4.0.4-2) unstable; urgency=medium
+
+  * Simplify DEP-8 tests so they just verify that the module is
+    importable.  This also makes them work.
+  * Add a DEP-8 test for Python 3.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 24 Jun 2014 18:43:12 -0400
+
+zope.hookable (4.0.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * d/control:
+    - Added python3-zope.hookable binary package.
+    - Updated Build-Depends.
+    - Added X-Python3-Version header.
+    - wrap-and-sort
+    - Added myself to Uploaders.
+    - Added XS-Testsuite header for DEP-8 tests.  Closes: #692697
+  * d/compat: Bump to version 9.
+  * d/rules: Convert to pybuild.
+
+ -- Barry Warsaw <barry@debian.org>  Fri, 20 Jun 2014 18:17:40 -0400
+
+zope.hookable (3.4.1-8) unstable; urgency=low
+
+  * Team upload.
+  * Use debian/source/options to ignore changes in egg-info directory
+    rather than debian/clean otherwise zcml and txt files are missing.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Tue, 08 Nov 2011 21:56:45 +0900
+
+zope.hookable (3.4.1-7) unstable; urgency=low
+
+  * Team upload.
+  * Switch to dh_python2. (Closes: #617168)
+    - Removes unneeded dependency on python-zope.testing.
+  * Switch to 3.0 (quilt) source format.
+  * debian/copyright: update, convert to dep5 format.
+  * debian/control: add Homepage and Vcs-Browser fields.
+  * Add debian/clean to get rid of egg-info/* to prevent FTBFS if
+    built twice.
+
+ -- Gediminas Paulauskas <menesis@pov.lt>  Tue, 25 Oct 2011 17:02:45 +0300
+
+zope.hookable (3.4.1-6) unstable; urgency=low
+
+  * Exclude *.c files from the binary package.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Wed, 10 Feb 2010 10:08:54 +0100
+
+zope.hookable (3.4.1-5) unstable; urgency=low
+
+  * Convert to debhelper 7 and the pydeb dh7 extension.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Tue, 05 Jan 2010 21:10:50 +0100
+
+zope.hookable (3.4.1-4) unstable; urgency=low
+
+  * debian/control: build-depend on python-van.pydeb >= 1.3.0-2.
+    (Closes: #552932)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Sun, 08 Nov 2009 11:24:52 +0100
+
+zope.hookable (3.4.1-3) unstable; urgency=low
+
+  * Set section to zope.
+  * Rebuild against van.pydeb 1.3.
+  * Don't include C source in the package.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sun, 13 Sep 2009 09:52:31 +0200
+
+zope.hookable (3.4.1-2) unstable; urgency=low
+
+  * Conflict with zope3. Closes: #538179.
+  * Bump standards version.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 26 Aug 2009 10:57:13 +0200
+
+zope.hookable (3.4.1-1) unstable; urgency=low
+
+  * Initial Packaging.
+
+ -- Brian Sutherland <brian@vanguardistas.net>  Tue, 09 Jun 2009 09:21:02 +0200
